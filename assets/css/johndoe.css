@@ -11508,10 +11508,10 @@ pre .code {
 
 .header {
   position: relative;
-  height: 80vh;
+  height: 40vh;
   min-height: 600px;
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/header.jpg);
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/header.jpg);
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/avatar.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/avatar.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11527,8 +11527,8 @@ pre .code {
 .header .header-content {
   width: 100%;
   position: absolute;
-  left: 0;
-  top: 55%;
+  left: 10px;
+  top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -11537,7 +11537,7 @@ pre .code {
 
 .header .header-content .header-subtitle {
   font-weight: 200;
-  font-size: calc(20px + (45 - 20) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(20px + (45 - 20) * ((100vw - 300px) / (3000 - 300)));
   margin-bottom: 20px;
 }
 
@@ -11722,4 +11722,16 @@ pre .code {
 
 .footer-social {
   margin: auto;
+}
+
+.badge-container {
+  padding: 0px 50px;
+}
+
+.badge-card {
+  padding: 20px;
+}
+
+.about-container {
+  padding-top: 40px;
 }
