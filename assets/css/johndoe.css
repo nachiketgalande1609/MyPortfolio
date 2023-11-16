@@ -11735,3 +11735,19 @@ pre .code {
 .about-container {
   padding-top: 40px;
 }
+
+.cert-link {
+  color: black;
+}
+
+.cert-logo {
+  width: 30px; /* Adjust the width and height as needed */
+  height: 30px;
+  margin-right: 10px; /* Add some space between the logo and text */
+  margin-bottom: 5px;
+}
+
+.cert-list {
+  list-style-type: none; /* Remove bullets */
+  padding-left: 0; /* Remove default padding */
+}
