@@ -575,7 +575,7 @@ section {
 
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.388);
   position: absolute;
   left: 0;
   right: 0;
@@ -584,6 +584,7 @@ section {
   transition: all ease-in-out 0.3s;
   z-index: 2;
   opacity: 0;
+  backdrop-filter: blur(5px);
 }
 
 .portfolio .portfolio-wrap .portfolio-links {
@@ -1110,11 +1111,14 @@ section {
 .skill-names a {
   margin-bottom: 10px;
   border-radius: 10px;
+  background-color: #040b14;
+  border: #000 1px solid;
 }
 .skill-names a:hover {
   cursor: auto;
   background-color: #ffffff;
   color: #000;
+  border: #000 1px solid;
 }
 .skill-names h4 {
   text-align: center;
@@ -1123,4 +1127,38 @@ section {
 .skill-names img {
   width: 5rem;
   margin-bottom: 30px;
+}
+
+.cert-list {
+  padding-left: 0;
+}
+.cert-list li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.cert-list img {
+  width: 50px;
+  margin-right: 1rem;
+}
+.cert-list a {
+  color: #000;
+}
+
+.portfolio .title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #149ddd;
+}
+
+.portfolio a {
+  background-color: #000;
+  border: none;
+  transition: 1s;
+}
+.portfolio a:hover {
+  background-color: #000;
+  border: none;
+}
+.portfolio img {
+  box-shadow: 0 0 20px #0000004c;
 }
