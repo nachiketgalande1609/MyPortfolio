@@ -112,12 +112,12 @@ h6 {
   background: #212431;
   color: #fff;
   line-height: 1;
-  padding: 8px 0;
+  padding: 12px 0;
   margin-right: 4px;
   border-radius: 50%;
   text-align: center;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   transition: 0.3s;
 }
 
@@ -312,7 +312,7 @@ section {
 }
 
 .section-bg {
-  background: #f5f8fd;
+  background: #f2f7ff;
 }
 
 .section-title {
@@ -346,6 +346,16 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about-name {
+  color: #173b6c;
+}
+
+.about-post {
+    color: #173b6c;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
@@ -430,7 +440,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
 .skills .progress {
   height: 60px;
@@ -693,6 +703,7 @@ section {
 .portfolio-details .portfolio-description p {
   padding: 0;
 }
+
 
 /*--------------------------------------------------------------
 # Services
@@ -1129,19 +1140,41 @@ section {
   margin-bottom: 30px;
 }
 
-.cert-list {
-  padding-left: 0;
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
 }
-.cert-list li {
-  list-style: none;
-  margin-bottom: 10px;
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
-.cert-list img {
+
+.cert-card:hover {
+  transform: scale(1.05);
+}
+
+.cert-logo {
   width: 50px;
-  margin-right: 1rem;
+  height: auto;
+  margin-right: 15px;
 }
-.cert-list a {
-  color: #000;
+
+.cert-link {
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.cert-link:hover {
+  color: #007bff;
 }
 
 .portfolio .title {
@@ -1177,7 +1210,7 @@ section {
 }
 
 .btn-resume {
-  background-color: #007BFF;
+  background-color: #212431;
   color: white;
   padding: 12px 25px;
   border-radius: 30px;
@@ -1196,8 +1229,7 @@ section {
 }
 
 .btn-resume:hover {
-  background-color: #000000;
-  border-color: #000000;
+  background-color: #149ddd;
   transform: translateY(-2px);
   color: #ffffff;
 }
