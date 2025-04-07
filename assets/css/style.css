@@ -704,6 +704,10 @@ section {
   padding: 0;
 }
 
+.portfolio .description {
+  margin-top: 20px;
+}
+
 
 /*--------------------------------------------------------------
 # Services
@@ -1181,6 +1185,7 @@ section {
   font-size: 24px;
   font-weight: 600;
   color: #149ddd;
+  margin-bottom: 20px;
 }
 
 .portfolio a {
@@ -1193,11 +1198,7 @@ section {
   border: none;
 }
 .portfolio img {
-  box-shadow: 0 0 20px #0000004c;
-}
-
-.img-fluid {
-  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn-github:hover {
@@ -1241,4 +1242,26 @@ section {
 
 .btn-resume:active {
   transform: translateY(1px);
+}
+
+.project-skill-capsule {
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 12px;
+}
+
+.project-card {
+  background: #ffffff;
+  padding: 50px 30px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  box-shadow:
+    10px 10px 20px rgb(0, 0, 0, 0.2),
+    -10px -10px 20px #ffffff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.005);
 }
