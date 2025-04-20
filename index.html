@@ -11,7 +11,13 @@
         <!-- Favicons -->
         <link href="assets/img/profile-img.jpg" rel="icon" />
         <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
-
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
         <!-- Google Fonts -->
         <link
             href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -159,7 +165,7 @@
                         <div class="col-lg-4 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
                             <div class="count-box">
                                 <i class="bi bi-clock-history"></i>
-                                <span data-purecounter-start="0" data-purecounter-end="44" data-purecounter-duration="1" class="purecounter"></span>
+                                <span data-purecounter-start="0" data-purecounter-end="45" data-purecounter-duration="1" class="purecounter"></span>
                                 <p><strong>months + </strong><br />Work Experience</p>
                             </div>
                         </div>
@@ -928,6 +934,9 @@
                 <div class="container">
                     <div class="section-title">
                         <h2>Certificates</h2>
+                    </div>
+                    <div class="cert-filter-container">
+                        <input type="text" id="cert-filter" class="cert-filter" placeholder="Search Certificates..." onkeyup="filterCertificates()" />
                     </div>
                     <div class="cert-grid">
                         <div class="cert-card">
