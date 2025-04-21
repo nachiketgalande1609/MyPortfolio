@@ -1788,12 +1788,6 @@ section {
   opacity: 1;
 }
 
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
 .social-link {
   color: white;
   background: rgba(255, 255, 255, 0.2);
@@ -1939,9 +1933,8 @@ section {
 }
 
 .profile-overlay {
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+
 }
 
 /* Modern info cards */
