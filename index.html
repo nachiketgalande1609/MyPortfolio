@@ -18,6 +18,9 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+
         <!-- Google Fonts -->
         <link
             href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -104,7 +107,7 @@
                     </div>
                     <div class="hero-cta">
                         <a href="./assets/resume.pdf" target="_blank" class="cta-button"> <i class="bi bi-file-earmark-person"></i> View Resume </a>
-                        <a href="#contact" class="cta-button secondary"> <i class="bi bi-send"></i> Contact Me </a>
+                        <button class="cta-button secondary contact-btn"><i class="bi bi-send"></i> Contact Me</button>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -115,6 +118,63 @@
                 <span></span>
             </div>
         </section>
+
+        <div class="hero-cta">
+            <a href="./assets/resume.pdf" target="_blank" class="cta-button"> <i class="bi bi-file-earmark-person"></i> View Resume </a>
+            <button class="cta-button secondary contact-btn"><i class="bi bi-send"></i> Contact Me</button>
+        </div>
+
+        <!-- Modern Contact Modal -->
+        <div class="contact-modal" id="contactModal">
+            <div class="modal-glass">
+                <div class="modal-header">
+                    <h3>Let's Connect</h3>
+                    <button class="close-modal">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:nachiketgalande1609@gmail.com" class="contact-value">nachiketgalande1609@gmail.com</a>
+                        </div>
+                        <button class="copy-btn" data-clipboard-text="nachiketgalande1609@gmail.com">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="bi bi-phone-fill"></i>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Phone</span>
+                            <a href="tel:+919764993023" class="contact-value">+91 9764993023</a>
+                        </div>
+                        <button class="copy-btn" data-clipboard-text="+919764993023">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="bi bi-linkedin"></i>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/nachiketgalande/" target="_blank" class="contact-value">nachiketgalande</a>
+                        </div>
+                        <a href="https://www.linkedin.com/in/nachiketgalande/" target="_blank" class="social-btn">
+                            <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- End Hero -->
 
         <main id="main">
@@ -3279,6 +3339,7 @@
                                     cursor: pointer;
                                     transition: all 0.3s ease;
                                     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+                                    display: inline-block;
                                 "
                             >
                                 View More Certifications

@@ -265,21 +265,6 @@
 
     new PureCounter();
 })();
-
-function filterCertificates() {
-    const input = document.getElementById("cert-filter").value.toLowerCase();
-    const certCards = document.querySelectorAll(".cert-card");
-
-    certCards.forEach((card) => {
-        const certTitle = card.querySelector(".cert-link").textContent.toLowerCase();
-        if (certTitle.includes(input)) {
-            card.style.display = ""; // Show the card
-        } else {
-            card.style.display = "none"; // Hide the card
-        }
-    });
-}
-
 // About Page
 
 // Add hover effects via JavaScript since we can't use :hover in inline styles
@@ -374,21 +359,33 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Ensure the search input field is being selected
     const searchInput = document.getElementById("cert-filter");
+    const viewMoreBtn = document.getElementById("viewMoreCerts");
+    const moreCerts = document.getElementById("moreCerts");
+
     if (searchInput) {
-        searchInput.addEventListener("keyup", filterCertificates);
+        searchInput.addEventListener("keyup", function () {
+            filterCertificates();
+            // Show/hide view more button based on search input
+            if (this.value.trim() !== "") {
+                viewMoreBtn.style.display = "none";
+                // Also show all certificates (including hidden ones) when searching
+                if (moreCerts) moreCerts.style.display = "grid";
+            } else {
+                viewMoreBtn.style.display = "inline-block";
+                // Reset to default view (only show initial certificates)
+                if (moreCerts) moreCerts.style.display = "none";
+                viewMoreBtn.textContent = "View More Certifications";
+            }
+        });
     }
 
     function filterCertificates() {
         const input = document.getElementById("cert-filter");
         const filter = input.value.toUpperCase();
-
-        // Select all certificates
         const certs = document.querySelectorAll(".cert-card");
 
         certs.forEach((cert) => {
-            // Check if the text content of the certificate matches the filter
             const text = cert.textContent || cert.innerText;
             if (text.toUpperCase().indexOf(filter) > -1) {
                 cert.style.display = "";
@@ -397,10 +394,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-
-    // View More Certifications functionality
-    const viewMoreBtn = document.getElementById("viewMoreCerts");
-    const moreCerts = document.getElementById("moreCerts");
 
     if (viewMoreBtn && moreCerts) {
         viewMoreBtn.addEventListener("click", function () {
@@ -413,4 +406,51 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const contactBtn = document.querySelector(".contact-btn");
+    const modal = document.getElementById("contactModal");
+    const closeBtn = document.querySelector(".close-modal");
+
+    // Initialize ClipboardJS for copy buttons
+    const clipboard = new ClipboardJS(".copy-btn");
+
+    // Create notification element
+    const notification = document.createElement("div");
+    notification.className = "copied-notification";
+    notification.textContent = "Copied to clipboard!";
+    document.body.appendChild(notification);
+
+    clipboard.on("success", function (e) {
+        notification.style.display = "block";
+        setTimeout(() => {
+            notification.style.display = "none";
+        }, 2000);
+        e.clearSelection();
+    });
+
+    contactBtn.addEventListener("click", function () {
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+    });
+
+    closeBtn.addEventListener("click", function () {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+    });
+
+    modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            modal.classList.remove("active");
+            document.body.style.overflow = "";
+        }
+    });
+
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && modal.classList.contains("active")) {
+            modal.classList.remove("active");
+            document.body.style.overflow = "";
+        }
+    });
 });
