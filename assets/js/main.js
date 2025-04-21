@@ -485,3 +485,34 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const statsSection = document.querySelector(".stats-section");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Trigger counter animations
+                    const counters = document.querySelectorAll(".purecounter");
+                    counters.forEach((counter) => {
+                        counter.setAttribute("data-purecounter-start", "0");
+                    });
+
+                    // Trigger wave animations
+                    const statCards = document.querySelectorAll(".stat-card");
+                    statCards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.classList.add("animate-in");
+                        }, index * 200);
+                    });
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+});
