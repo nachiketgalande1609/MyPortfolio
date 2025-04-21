@@ -24,11 +24,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: #37b3ed;
-  text-decoration: none;
-}
-
 h1,
 h2,
 h3,
@@ -137,12 +132,6 @@ h6 {
   width: 40px;
   height: 40px;
   transition: 0.3s;
-}
-
-#header .profile .social-links a:hover {
-  background: #149ddd;
-  color: #fff;
-  text-decoration: none;
 }
 
 #main {
