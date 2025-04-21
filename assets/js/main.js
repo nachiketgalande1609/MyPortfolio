@@ -279,3 +279,96 @@ function filterCertificates() {
         }
     });
 }
+
+// About Page
+
+// Add hover effects via JavaScript since we can't use :hover in inline styles
+document.addEventListener("DOMContentLoaded", function () {
+    // Profile card hover
+    const profileCard = document.querySelector(".col-lg-5 > div");
+    if (profileCard) {
+        profileCard.addEventListener("mouseenter", function () {
+            this.style.boxShadow = "0 20px 40px rgba(0, 0, 0, 0.15)";
+            this.querySelector("div").style.opacity = "1";
+        });
+        profileCard.addEventListener("mouseleave", function () {
+            this.style.boxShadow = "0 15px 30px rgba(0, 0, 0, 0.1)";
+            this.querySelector("div").style.opacity = "0";
+        });
+    }
+
+    // Social icon hover
+    const socialIcons = document.querySelectorAll(".social-links a");
+    socialIcons.forEach((icon) => {
+        icon.addEventListener("mouseenter", function () {
+            this.style.background = "rgba(255, 255, 255, 0.3)";
+            this.style.transform = "translateY(-3px)";
+        });
+        icon.addEventListener("mouseleave", function () {
+            this.style.background = "rgba(255, 255, 255, 0.2)";
+            this.style.transform = "";
+        });
+    });
+
+    // Button hover effects
+    const buttons = document.querySelectorAll('a[style*="padding: 12px 25px"]');
+    buttons.forEach((button) => {
+        button.addEventListener("mouseenter", function () {
+            if (this.textContent === "Hire Me") {
+                this.style.transform = "translateY(-3px)";
+                this.style.boxShadow = "0 10px 20px rgba(58, 123, 213, 0.3)";
+            } else {
+                this.style.background = "#3a7bd5";
+                this.style.color = "white";
+                this.style.transform = "translateY(-3px)";
+                this.style.boxShadow = "0 10px 20px rgba(58, 123, 213, 0.2)";
+            }
+        });
+        button.addEventListener("mouseleave", function () {
+            if (this.textContent === "Hire Me") {
+                this.style.transform = "";
+                this.style.boxShadow = "";
+            } else {
+                this.style.background = "";
+                this.style.color = "#3a7bd5";
+                this.style.transform = "";
+                this.style.boxShadow = "";
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Skill tag hover effects
+    const skillTags = document.querySelectorAll('span[style*="display: inline-block"]');
+    skillTags.forEach((tag) => {
+        tag.addEventListener("mouseenter", function () {
+            const bgColor = this.style.backgroundColor.replace("0.1", "0.2");
+            this.style.backgroundColor = bgColor;
+            this.style.transform = "scale(1.05)";
+        });
+        tag.addEventListener("mouseleave", function () {
+            const bgColor = this.style.backgroundColor.replace("0.2", "0.1");
+            this.style.backgroundColor = bgColor;
+            this.style.transform = "";
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // View More Projects functionality
+    const viewMoreBtn = document.getElementById("viewMoreBtn");
+    const moreProjects = document.getElementById("moreProjects");
+
+    if (viewMoreBtn && moreProjects) {
+        viewMoreBtn.addEventListener("click", function () {
+            if (moreProjects.style.display === "none" || moreProjects.style.display === "") {
+                moreProjects.style.display = "block";
+                this.textContent = "Show Less";
+            } else {
+                moreProjects.style.display = "none";
+                this.textContent = "View More Projects";
+            }
+        });
+    }
+});
