@@ -454,3 +454,34 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// Add this JavaScript for interactive elements
+document.addEventListener("DOMContentLoaded", function () {
+    // Animate the section divider on scroll
+    const sectionDivider = document.querySelector(".section-divider");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    sectionDivider.style.width = "120px";
+                }
+            });
+        },
+        { threshold: 0.5 }
+    );
+
+    if (sectionDivider) {
+        observer.observe(sectionDivider);
+    }
+
+    // Add smooth scroll to all links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth",
+            });
+        });
+    });
+});

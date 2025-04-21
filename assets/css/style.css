@@ -333,9 +333,6 @@ section {
   background: #f2f7ff;
 }
 
-.section-title {
-  padding-bottom: 30px;
-}
 
 .section-title h2 {
   font-size: 32px;
@@ -1478,35 +1475,6 @@ section {
   border-color: #94a3b8;
 }
 
-.scroll-indicator {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.scroll-indicator span {
-  display: block;
-  width: 20px;
-  height: 30px;
-  border: 2px solid #94a3b8;
-  border-radius: 10px;
-  position: relative;
-}
-
-.scroll-indicator span::before {
-  content: '';
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 8px;
-  background: #94a3b8;
-  border-radius: 2px;
-  animation: scroll 2s infinite;
-}
-
 @keyframes scroll {
   0% {
     transform: translateY(0);
@@ -1737,4 +1705,396 @@ section {
   z-index: 1100;
   animation: fadeIn 0.3s ease;
   display: none;
+}
+
+.section-bg {
+  background-color: #f8f9fa;
+  padding: 100px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  background: linear-gradient(45deg, #3a7bd5, #00d2ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  position: relative;
+}
+
+.section-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(45deg, #3a7bd5, #00d2ff);
+  margin: 0 auto 20px;
+  border-radius: 2px;
+  transition: width 0.5s ease;
+}
+
+.section-header:hover .section-divider {
+  width: 120px;
+}
+
+.section-subtitle {
+  color: #6c757d;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.profile-image-container {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-image-container:hover {
+  transform: translateY(-5px);
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: all 0.5s ease;
+}
+
+.profile-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  padding: 30px 20px 20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.profile-image-container:hover .profile-overlay {
+  opacity: 1;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-link {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.social-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+.profile-content {
+  padding-left: 30px;
+}
+
+.profile-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #343a40;
+}
+
+.profile-title {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.profile-description {
+  color: #495057;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+.highlight-box {
+  border-left: 4px solid #3a7bd5;
+  padding: 20px;
+  margin: 25px 0;
+  background-color: #ffffff;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-box:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.highlight-box p {
+  margin: 0;
+  color: #495057;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.info-item:hover {
+  background-color: rgba(58, 123, 213, 0.05);
+}
+
+.info-icon {
+  font-size: 1.2rem;
+  color: #3a7bd5;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  background: rgba(58, 123, 213, 0.1);
+  transition: all 0.3s ease;
+}
+
+.info-item:hover .info-icon {
+  background: rgba(58, 123, 213, 0.2);
+  transform: scale(1.1);
+}
+
+.info-label {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+
+.info-value {
+  font-size: 1rem;
+  color: #343a40;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.download-btn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #3a7bd5;
+  color: #3a7bd5;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+}
+
+.download-btn:hover {
+  background: linear-gradient(45deg, #3a7bd5, #00d2ff);
+  color: white;
+  box-shadow: 0 10px 20px rgba(58, 123, 213, 0.2);
+  transform: translateY(-2px);
+  border: none;
+}
+
+@media (max-width: 992px) {
+  .profile-content {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+
+  .section-bg {
+    padding: 70px 0;
+  }
+}
+
+.profile-overlay {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Modern info cards */
+.info-item {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Gradient border for profile image */
+.profile-image-container {
+    position: relative;
+    z-index: 1;
+}
+
+.profile-image-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #3a7bd5, #00d2ff);
+    z-index: -1;
+    border-radius: 17px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-image-container:hover::before {
+    opacity: 1;
+}
+
+/* Modern button with gradient */
+.download-btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+.download-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #3a7bd5, #00d2ff);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.download-btn:hover::before {
+    opacity: 1;
+}
+
+/* Responsive Typography */
+@media (min-width: 992px) {
+    .profile-name {
+        font-size: 2.5rem;
+    }
+    
+    .profile-title {
+        font-size: 1.4rem;
+    }
+    
+    .profile-description {
+        font-size: 1.1rem;
+    }
+}
+
+/* Micro-interactions */
+.social-link {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.social-link i {
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover i {
+    transform: scale(1.2);
+}
+
+/* Modern section spacing */
+.section-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-bg::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, rgba(58, 123, 213, 0.1), rgba(0, 210, 255, 0.1));
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.section-bg::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(45deg, rgba(58, 123, 213, 0.05), rgba(0, 210, 255, 0.05));
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Modern highlight box */
+.highlight-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #3a7bd5, #00d2ff);
+    transition: height 0.3s ease;
+}
+
+.highlight-box:hover::before {
+    height: 0;
+    top: auto;
+    bottom: 0;
+}
+
+/* Modern info item animation */
+.info-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .resume-download {
+    text-align: center;
+  }
 }

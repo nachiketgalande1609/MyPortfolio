@@ -114,9 +114,6 @@
                     <!-- Optional: Add a modern illustration or photo -->
                 </div>
             </div>
-            <div class="scroll-indicator">
-                <span></span>
-            </div>
         </section>
 
         <!-- Modern Contact Modal -->
@@ -176,288 +173,94 @@
             <!-- ======= About Section ======= -->
             <section id="about" class="section-bg">
                 <div class="container">
-                    <div style="text-align: center; margin-bottom: 60px">
-                        <h2
-                            style="
-                                font-size: 2.5rem;
-                                font-weight: 700;
-                                margin-bottom: 15px;
-                                background: linear-gradient(45deg, #3a7bd5, #00d2ff);
-                                -webkit-background-clip: text;
-                                background-clip: text;
-                                color: transparent;
-                                display: inline-block;
-                            "
-                        >
-                            About Me
-                        </h2>
-                        <div
-                            style="
-                                width: 80px;
-                                height: 4px;
-                                background: linear-gradient(45deg, #3a7bd5, #00d2ff);
-                                margin: 0 auto 20px;
-                                border-radius: 2px;
-                            "
-                        ></div>
-                        <p style="color: #6c757d; font-size: 1.1rem">Get to know me better</p>
+                    <div class="section-header">
+                        <h2 class="section-title">About Me</h2>
+                        <div class="section-divider"></div>
+                        <p class="section-subtitle">Get to know me better</p>
                     </div>
 
                     <div class="row align-items-center">
-                        <div class="col-lg-5" data-aos="fade-right">
-                            <div
-                                style="
-                                    position: relative;
-                                    border-radius: 15px;
-                                    overflow: hidden;
-                                    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-                                    transition: all 0.3s ease;
-                                "
-                            >
-                                <img
-                                    src="assets/img/profile-img.jpg"
-                                    style="width: 100%; height: auto; display: block; transition: all 0.5s ease"
-                                    alt="Nachiket Galande"
-                                />
-                                <div
-                                    style="
-                                        position: absolute;
-                                        bottom: 0;
-                                        left: 0;
-                                        right: 0;
-                                        background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-                                        padding: 30px 20px 20px;
-                                        opacity: 0;
-                                        transition: all 0.3s ease;
-                                    "
-                                >
-                                    <div style="display: flex; justify-content: center; gap: 15px">
-                                        <a
-                                            href="#"
-                                            style="
-                                                color: white;
-                                                background: rgba(255, 255, 255, 0.2);
-                                                width: 40px;
-                                                height: 40px;
-                                                border-radius: 50%;
-                                                display: flex;
-                                                align-items: center;
-                                                justify-content: center;
-                                                transition: all 0.3s ease;
-                                            "
-                                            ><i class="bi bi-linkedin"></i
-                                        ></a>
-                                        <a
-                                            href="#"
-                                            style="
-                                                color: white;
-                                                background: rgba(255, 255, 255, 0.2);
-                                                width: 40px;
-                                                height: 40px;
-                                                border-radius: 50%;
-                                                display: flex;
-                                                align-items: center;
-                                                justify-content: center;
-                                                transition: all 0.3s ease;
-                                            "
-                                            ><i class="bi bi-github"></i
-                                        ></a>
-                                        <a
-                                            href="#"
-                                            style="
-                                                color: white;
-                                                background: rgba(255, 255, 255, 0.2);
-                                                width: 40px;
-                                                height: 40px;
-                                                border-radius: 50%;
-                                                display: flex;
-                                                align-items: center;
-                                                justify-content: center;
-                                                transition: all 0.3s ease;
-                                            "
-                                            ><i class="bi bi-twitter-x"></i
-                                        ></a>
+                        <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
+                            <div class="profile-image-container">
+                                <img src="assets/img/profile-img.jpg" class="profile-image" alt="Nachiket Galande" />
+                                <div class="profile-overlay">
+                                    <div class="social-links">
+                                        <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                                        <a href="#" class="social-link"><i class="bi bi-github"></i></a>
+                                        <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-7" data-aos="fade-left">
-                            <div style="padding-left: 30px">
-                                <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 5px; color: #343a40">Nachiket Galande</h3>
-                                <h4 style="font-size: 1.2rem; color: #6c757d; margin-bottom: 20px; font-weight: 500">
-                                    Full Stack Software Developer
-                                </h4>
+                        <div class="col-lg-7" data-aos="fade-left" data-aos-delay="150">
+                            <div class="profile-content">
+                                <h3 class="profile-name">Nachiket Galande</h3>
+                                <h4 class="profile-title">Full Stack Software Developer</h4>
 
-                                <div>
-                                    <p style="color: #495057; line-height: 1.8; margin-bottom: 20px">
-                                        Full Stack Developer with 4+ years of experience building scalable web applications. I specialize in creating
-                                        seamless user experiences with modern frontend technologies and robust backend systems.
+                                <p class="profile-description">
+                                    Full Stack Developer with 4+ years of experience building scalable web applications. I specialize in creating
+                                    seamless user experiences with modern frontend technologies and robust backend systems.
+                                </p>
+
+                                <div class="highlight-box">
+                                    <p>
+                                        Passionate about transforming complex designs into efficient technical solutions that improve performance and
+                                        user experience.
                                     </p>
-
-                                    <div
-                                        style="
-                                            border-left: 4px solid #3a7bd5;
-                                            padding: 15px;
-                                            border-radius: 0 8px 8px 0;
-                                            margin: 20px 0;
-                                            background-color: #ffffff;
-                                        "
-                                    >
-                                        <p style="margin: 0; color: #495057; line-height: 1.8">
-                                            Passionate about transforming complex designs into efficient technical solutions that improve performance
-                                            and user experience.
-                                        </p>
-                                    </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div style="display: flex; align-items: center; margin-bottom: 15px">
-                                            <i
-                                                class="bi bi-calendar3"
-                                                style="
-                                                    font-size: 1.2rem;
-                                                    color: #3a7bd5;
-                                                    width: 40px;
-                                                    height: 40px;
-                                                    border-radius: 50%;
-                                                    display: flex;
-                                                    align-items: center;
-                                                    justify-content: center;
-                                                    margin-right: 15px;
-                                                "
-                                            ></i>
+                                        <div class="info-item">
+                                            <i class="bi bi-calendar3 info-icon"></i>
                                             <div>
-                                                <h5 style="font-size: 0.9rem; color: #6c757d; margin-bottom: 3px; font-weight: 500">Birthday</h5>
-                                                <p style="font-size: 1rem; color: #343a40; margin-bottom: 0; font-weight: 600">16 Sept 1999</p>
+                                                <h5 class="info-label">Birthday</h5>
+                                                <p class="info-value">16 Sept 1999</p>
                                             </div>
                                         </div>
-                                        <div style="display: flex; align-items: center; margin-bottom: 15px">
-                                            <i
-                                                class="bi bi-phone"
-                                                style="
-                                                    font-size: 1.2rem;
-                                                    color: #3a7bd5;
-                                                    width: 40px;
-                                                    height: 40px;
-                                                    border-radius: 50%;
-                                                    display: flex;
-                                                    align-items: center;
-                                                    justify-content: center;
-                                                    margin-right: 15px;
-                                                "
-                                            ></i>
+                                        <div class="info-item">
+                                            <i class="bi bi-phone info-icon"></i>
                                             <div>
-                                                <h5 style="font-size: 0.9rem; color: #6c757d; margin-bottom: 3px; font-weight: 500">Phone</h5>
-                                                <p style="font-size: 1rem; color: #343a40; margin-bottom: 0; font-weight: 600">+91 9764993023</p>
+                                                <h5 class="info-label">Phone</h5>
+                                                <p class="info-value">+91 9764993023</p>
                                             </div>
                                         </div>
-                                        <div style="display: flex; align-items: center; margin-bottom: 15px">
-                                            <i
-                                                class="bi bi-geo-alt"
-                                                style="
-                                                    font-size: 1.2rem;
-                                                    color: #3a7bd5;
-                                                    width: 40px;
-                                                    height: 40px;
-                                                    border-radius: 50%;
-                                                    display: flex;
-                                                    align-items: center;
-                                                    justify-content: center;
-                                                    margin-right: 15px;
-                                                "
-                                            ></i>
+                                        <div class="info-item">
+                                            <i class="bi bi-geo-alt info-icon"></i>
                                             <div>
-                                                <h5 style="font-size: 0.9rem; color: #6c757d; margin-bottom: 3px; font-weight: 500">Location</h5>
-                                                <p style="font-size: 1rem; color: #343a40; margin-bottom: 0; font-weight: 600">
-                                                    Thane, Maharashtra, India
-                                                </p>
+                                                <h5 class="info-label">Location</h5>
+                                                <p class="info-value">Thane, Maharashtra, India</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div style="display: flex; align-items: center; margin-bottom: 15px">
-                                            <i
-                                                class="bi bi-person-badge"
-                                                style="
-                                                    font-size: 1.2rem;
-                                                    color: #3a7bd5;
-                                                    width: 40px;
-                                                    height: 40px;
-                                                    border-radius: 50%;
-                                                    display: flex;
-                                                    align-items: center;
-                                                    justify-content: center;
-                                                    margin-right: 15px;
-                                                "
-                                            ></i>
+                                        <div class="info-item">
+                                            <i class="bi bi-person-badge info-icon"></i>
                                             <div>
-                                                <h5 style="font-size: 0.9rem; color: #6c757d; margin-bottom: 3px; font-weight: 500">Age</h5>
-                                                <p style="font-size: 1rem; color: #343a40; margin-bottom: 0; font-weight: 600">24</p>
+                                                <h5 class="info-label">Age</h5>
+                                                <p class="info-value">24</p>
                                             </div>
                                         </div>
-                                        <div style="display: flex; align-items: center; margin-bottom: 15px">
-                                            <i
-                                                class="bi bi-mortarboard"
-                                                style="
-                                                    font-size: 1.2rem;
-                                                    color: #3a7bd5;
-                                                    width: 40px;
-                                                    height: 40px;
-                                                    border-radius: 50%;
-                                                    display: flex;
-                                                    align-items: center;
-                                                    justify-content: center;
-                                                    margin-right: 15px;
-                                                "
-                                            ></i>
+                                        <div class="info-item">
+                                            <i class="bi bi-mortarboard info-icon"></i>
                                             <div>
-                                                <h5 style="font-size: 0.9rem; color: #6c757d; margin-bottom: 3px; font-weight: 500">Education</h5>
-                                                <p style="font-size: 1rem; color: #343a40; margin-bottom: 0; font-weight: 600">
-                                                    B.Tech Computer Science
-                                                </p>
+                                                <h5 class="info-label">Education</h5>
+                                                <p class="info-value">B.Tech Computer Science</p>
                                             </div>
                                         </div>
-                                        <div style="display: flex; align-items: center; margin-bottom: 15px">
-                                            <i
-                                                class="bi bi-envelope"
-                                                style="
-                                                    font-size: 1.2rem;
-                                                    color: #3a7bd5;
-                                                    width: 40px;
-                                                    height: 40px;
-                                                    border-radius: 50%;
-                                                    display: flex;
-                                                    align-items: center;
-                                                    justify-content: center;
-                                                    margin-right: 15px;
-                                                "
-                                            ></i>
+                                        <div class="info-item">
+                                            <i class="bi bi-envelope info-icon"></i>
                                             <div>
-                                                <h5 style="font-size: 0.9rem; color: #6c757d; margin-bottom: 3px; font-weight: 500">Email</h5>
-                                                <p style="font-size: 1rem; color: #343a40; margin-bottom: 0; font-weight: 600">
-                                                    nachiketgalande1609@gmail.com
-                                                </p>
+                                                <h5 class="info-label">Email</h5>
+                                                <p class="info-value">nachiketgalande1609@gmail.com</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div style="margin-top: 30px">
-                                    <a
-                                        href="./assets/resume.pdf"
-                                        style="
-                                            padding: 12px 25px;
-                                            border-radius: 30px;
-                                            font-weight: 600;
-                                            transition: all 0.3s ease;
-                                            border: 2px solid #3a7bd5;
-                                            color: #3a7bd5;
-                                            text-decoration: none;
-                                        "
-                                        >Download Resume</a
-                                    >
+                                <div class="resume-download">
+                                    <a href="./assets/resume.pdf" class="download-btn"> Download Resume <i class="bi bi-download ms-2"></i> </a>
                                 </div>
                             </div>
                         </div>
