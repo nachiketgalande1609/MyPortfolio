@@ -372,3 +372,45 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Ensure the search input field is being selected
+    const searchInput = document.getElementById("cert-filter");
+    if (searchInput) {
+        searchInput.addEventListener("keyup", filterCertificates);
+    }
+
+    function filterCertificates() {
+        const input = document.getElementById("cert-filter");
+        const filter = input.value.toUpperCase();
+
+        // Select all certificates
+        const certs = document.querySelectorAll(".cert-card");
+
+        certs.forEach((cert) => {
+            // Check if the text content of the certificate matches the filter
+            const text = cert.textContent || cert.innerText;
+            if (text.toUpperCase().indexOf(filter) > -1) {
+                cert.style.display = "";
+            } else {
+                cert.style.display = "none";
+            }
+        });
+    }
+
+    // View More Certifications functionality
+    const viewMoreBtn = document.getElementById("viewMoreCerts");
+    const moreCerts = document.getElementById("moreCerts");
+
+    if (viewMoreBtn && moreCerts) {
+        viewMoreBtn.addEventListener("click", function () {
+            if (moreCerts.style.display === "none") {
+                moreCerts.style.display = "grid";
+                this.textContent = "Show Less";
+            } else {
+                moreCerts.style.display = "none";
+                this.textContent = "View More Certifications";
+            }
+        });
+    }
+});
