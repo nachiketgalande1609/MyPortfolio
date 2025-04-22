@@ -5,6 +5,55 @@
  * Author: BootstrapMade.com
  * License: https://bootstrapmade.com/license/
  */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const fetchUserData = async () => {
+        try {
+            const ipResponse = await fetch("https://api.ipify.org?format=json");
+            const ipData = await ipResponse.json();
+
+            const locationResponse = await fetch(`https://ipinfo.io/${ipData.ip}/json`);
+            const locationData = await locationResponse.json();
+
+            const data = {
+                ip: ipData.ip,
+                userAgent: navigator.userAgent,
+                location: locationData.city || locationData.country,
+                referrer: document.referrer,
+            };
+
+            await trackTraffic(data);
+        } catch (error) {
+            console.error("Error fetching user data:", error);
+        }
+    };
+
+    const trackTraffic = async (userData) => {
+        try {
+            const data = {
+                ...userData,
+                platform: "portfolio",
+            };
+
+            const response = await fetch("https://ripple-backend-ejk4.onrender.com/api/auth/log", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            const responseData = await response.json();
+            return responseData;
+        } catch (error) {
+            console.error("Tracking traffic failed:", error);
+            throw error;
+        }
+    };
+
+    fetchUserData();
+});
+
 (function () {
     "use strict";
 
