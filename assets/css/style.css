@@ -1389,6 +1389,7 @@ section {
 }
 
 .hero-title {
+  font-family: 'Poppins', sans-serif;
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
@@ -1400,6 +1401,7 @@ section {
 }
 
 .hero-subtitle {
+  font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
   color: #94a3b8;
   margin-bottom: 0.5rem;
@@ -1410,7 +1412,7 @@ section {
 }
 
 .typing-animation {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
   height: 3rem;
   color: #f8fafc;
@@ -1441,6 +1443,12 @@ section {
   background: #3b82f6;
   color: white;
   border: 2px solid #3b82f6;
+}
+
+@media (max-width: 768px) {
+  .cta-button {
+      padding: 0.6rem 1.2rem;
+  }
 }
 
 .cta-button:hover {
