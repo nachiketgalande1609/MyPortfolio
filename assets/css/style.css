@@ -1446,9 +1446,8 @@ section {
 }
 
 @media (max-width: 768px) {
-  .cta-button {
-      padding: 0.6rem 1.2rem;
-  }
+  
+  
 }
 
 .cta-button:hover {
@@ -1488,7 +1487,15 @@ section {
   }
 
   .hero-title {
-    font-size: 3rem;
+    font-size: 4rem;
+  }
+
+  .cta-button {
+    padding: 0.6rem 1.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem !important;
   }
 
   .hero-cta {
