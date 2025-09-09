@@ -1906,7 +1906,7 @@ section {
     color: white;
     box-shadow: 0 10px 20px rgba(58, 123, 213, 0.2);
     transform: translateY(-2px);
-    border: none;
+    /* border: none; */
 }
 
 @media (max-width: 992px) {
@@ -2052,6 +2052,11 @@ section {
 .info-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.resume-download {
+    text-align: center;
+    margin-top: 10px;
 }
 
 @media (max-width: 768px) {
